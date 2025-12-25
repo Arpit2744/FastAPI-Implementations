@@ -13,3 +13,7 @@ __pycache__/
 # Ignore IDE settings (VS Code, PyCharm)
 .vscode/
 .idea/
+
+#ignore log folder
+logs/
+*.log
