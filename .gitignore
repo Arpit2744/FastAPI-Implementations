@@ -1,0 +1,15 @@
+# Ignore the Virtual Environment folder
+.venv/
+venv/
+env/
+
+# Ignore Python compiled files (junk files)
+__pycache__/
+*.pyc
+
+# Ignore environment variables (passwords/API keys)
+.env
+
+# Ignore IDE settings (VS Code, PyCharm)
+.vscode/
+.idea/
