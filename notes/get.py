@@ -77,7 +77,8 @@ async def read_item(skip: int=0,limit: int=10):
 
 """
 The query is the set of key-value pairs that go after the ? in a URL,
- separated by & characters.
+ separated by & characters. it has additional data like sorting,filtering,searcing and pagination without altering
+ end point path itself.
 
 For example, in the URL:
 
