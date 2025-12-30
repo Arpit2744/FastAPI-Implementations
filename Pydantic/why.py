@@ -4,11 +4,11 @@ from typing import List,Dict,Optional,Annotated
 class Patient(BaseModel):
 
     name: Annotated[str,Field(max_length=50, title='name of the patient', description='Give the name of the patient in less than 50 characters',examples=['arpit','amit'])]
-    age: int = Field(gt=0,ls=120)
+    age: int = Field(gt=0,lt=120)
     email: EmailStr
     linkedin_url: AnyUrl
     weight: Annotated[float,Field(gt=0,strict=True)]
-    married: Annotated[bool,Field[default=None,description='is the patient married or not']]
+    married: Annotated[bool,Field(default=None,description='is the patient married or not')]
     allergies: Annotated[Optional[list[str]], Field(default=None,max_length=5)]
     contact_details: Dict[str,str]
 
@@ -34,7 +34,7 @@ patient_info = {
     'name': 'arpit',
     'age':20,
     'email':'asingh@gmail.com',
-    'linkedin_url':'https:www.linked.com',
+    'linkedin_url':'https://www.linked.com',
     'weight':60.5,
     'married':True,
     'allergies':['pollen','dust'],
